@@ -1,0 +1,62 @@
+.main {
+  background-color: var(--color-secondaryBg);
+  padding: 16px 32px;
+  width: 100%;
+}
+.container {
+  background: var(--light-gray);
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  resize: both;
+  overflow: auto;
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.titleWrapper,
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iconWrapper {
+  gap: 36px;
+  margin-right: 16px;
+}
+.iconAction {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.iconAction:hover,
+.iconAction:focus {
+  color: var(--color-primary-hover);
+}
+.content {
+  border: 2px solid var(--grey);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.contentTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.contentTitle::after {
+  content: " ";
+  width: 2px;
+  height: 26px;
+  background-color: var(--grey);
+  display: block;
+  margin-left: 8px;
+}

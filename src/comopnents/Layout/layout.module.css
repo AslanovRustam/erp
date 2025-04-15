@@ -1,0 +1,9 @@
+.layout {
+  display: flex;
+  font-family: sans-serif;
+  background: #e6e6e6;
+  flex-direction: column;
+}
+.mainContent {
+  display: flex;
+}

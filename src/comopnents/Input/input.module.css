@@ -1,0 +1,32 @@
+.lablel {
+  display: flex;
+  align-items: center;
+}
+.part {
+  width: 22vw;
+}
+.text {
+  min-width: 5vw;
+  text-align: start;
+  white-space: nowrap;
+}
+.input {
+  outline: none;
+  border: 1px solid var(--grey);
+  transition: var(--transition);
+  font-size: 16px;
+  padding: 2px;
+  width: 100%;
+}
+.small {
+  width: 12vw;
+}
+.medium {
+  width: 14vw;
+}
+.tiny {
+  width: 8vw;
+}
+.full {
+  width: 100%;
+}

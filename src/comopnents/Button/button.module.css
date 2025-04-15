@@ -1,0 +1,32 @@
+.menuButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 2px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: inherit;
+}
+.menuButton:hover,
+.menuButton:focus {
+  background-color: var(--grey);
+  color: var(--color-primary-hover);
+}
+.menuButton:active {
+  background-color: var(--grey);
+}
+.icon {
+  width: 24px;
+  height: auto;
+}
+.text {
+  color: inherit;
+}
+.tooltip {
+  cursor: auto;
+}
+.tooltip:hover,
+.tooltip:focus {
+  background-color: transparent;
+  color: inherit;
+}

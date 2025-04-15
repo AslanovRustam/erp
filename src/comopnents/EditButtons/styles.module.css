@@ -1,0 +1,59 @@
+.container {
+  border: 1px solid var(--grey);
+  padding: 4px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  color: var(--grey);
+  width: 14px;
+  height: auto;
+}
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  width: 60px;
+}
+.item:first-child {
+  margin-left: 3%;
+}
+.item::after {
+  content: " ";
+  width: 2px;
+  height: 20px;
+  background-color: var(--grey);
+  display: block;
+  margin-left: 30px;
+}
+.textButton {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+.textButton span {
+  text-wrap: nowrap;
+  margin-right: auto;
+}
+.textButton::after {
+  content: " ";
+  width: 2px;
+  height: 20px;
+  background-color: var(--grey);
+  display: block;
+  margin-left: 4px;
+}
+.textList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}

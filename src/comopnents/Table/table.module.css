@@ -1,0 +1,72 @@
+.wrapper {
+  border: 1px solid #ccc;
+  overflow: auto;
+  background: #f8fefc;
+  padding: 4px;
+}
+
+.table {
+  /* width: 100%; */
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid #666;
+  padding: 1px;
+  text-align: center;
+  background-color: #d2e4e4;
+}
+
+tbody td {
+  background-color: #f8fefc;
+}
+
+.activeRowArrow {
+  color: black;
+  font-weight: bold;
+  background-color: #f8fefc;
+  width: 1.2%;
+}
+.item {
+  width: 7.6%;
+}
+.productNumber {
+  width: 23.9%;
+}
+.unitPrice {
+  width: 9.5%;
+}
+.quantity {
+  width: 7.2%;
+}
+.subtotal {
+  width: 9.5%;
+}
+.warehouse {
+  width: 3.6%;
+}
+.productNameStandards {
+  width: 34%;
+}
+.taxCategory {
+  width: 3.6%;
+}
+.attachedUnit {
+  width: 3.6%;
+}
+.input {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
+  outline: none;
+  transition: var(--transition);
+}
+.input:hover,
+.input:focus {
+  border-color: var(--color-primary-hover);
+}

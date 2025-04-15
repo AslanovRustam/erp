@@ -1,0 +1,31 @@
+.navbar {
+  width: 100%;
+  border-bottom: 1px solid var(--grey);
+}
+.list,
+.listTop {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.listTop {
+  font-weight: normal;
+}
+.listTop .item button {
+  font-size: 0.8rem;
+}
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: inherit;
+}
+.item::after {
+  content: " ";
+  width: 2px;
+  height: 100%;
+  background-color: var(--grey);
+}
+.active {
+  color: var(--color-primary-hover);
+}

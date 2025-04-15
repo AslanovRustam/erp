@@ -1,0 +1,19 @@
+.bottomSection {
+  display: grid;
+  grid-template-columns: 40% 10% 48%;
+  gap: 8px;
+  padding: 8px;
+  align-items: center;
+  background-color: rgba(127, 212, 255, 0.46);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.bottomSection p {
+  padding: 1px;
+  text-align: start;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+.bottomSection p:last-child {
+  height: 100%;
+}
