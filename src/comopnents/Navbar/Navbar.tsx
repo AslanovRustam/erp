@@ -9,6 +9,7 @@ interface NavbarProps {}
 const Navbar: FC<NavbarProps> = () => {
   return (
     <nav className={styles.navbar}>
+      {/* Top section of the navbar */}
       <ul className={styles.listTop}>
         {navbarTopItems.map((item) => (
           <NavLink
@@ -20,6 +21,7 @@ const Navbar: FC<NavbarProps> = () => {
           </NavLink>
         ))}
       </ul>
+      {/* Main section of the navbar (secondary actions) */}
       <ul className={styles.list}>
         {navbarItems.map((item) => (
           <li key={item.icon} className={styles.item}>

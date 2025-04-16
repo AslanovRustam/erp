@@ -27,11 +27,13 @@ const Form: FC<FormProps> = () => {
     finalSalesId: "",
     taxType: "",
   });
+  // Generalized change handler for all input fields
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value, type } = e.target as HTMLInputElement;
     const checked = (e.target as HTMLInputElement).checked;
+    // Update state with the new value (convert checkbox boolean to string)
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? String(checked) : value,
@@ -62,6 +64,7 @@ const Form: FC<FormProps> = () => {
             value={formData.accountDate}
             onChange={handleChange}
             name="accountDate"
+            color="blue"
           />
           <CustomInput
             label="附記事項"
@@ -78,6 +81,7 @@ const Form: FC<FormProps> = () => {
             value={formData.salesDate}
             onChange={handleChange}
             name="salesDate"
+            color="blue"
           />
           <CustomInput
             label="折讓金額"
@@ -92,6 +96,7 @@ const Form: FC<FormProps> = () => {
             value={formData.installer}
             onChange={handleChange}
             name="installer"
+            color="blue"
           />
           <CustomInput
             label="已付金額"
@@ -110,6 +115,7 @@ const Form: FC<FormProps> = () => {
             name="customer"
             value={formData.customer}
             onChange={handleChange}
+            color="red"
           />
           <CustomInput
             label="稅額"
@@ -140,6 +146,7 @@ const Form: FC<FormProps> = () => {
             value={formData.customerTitle}
             onChange={handleChange}
             name="customerTitle"
+            color="red"
           />
           <div className={styles.boxWrapper}>
             <CustomInput
@@ -150,6 +157,7 @@ const Form: FC<FormProps> = () => {
               name="salesperson"
               value={formData.salesperson}
               onChange={handleChange}
+              color="blue"
             />
             <input className={styles.input} type="text" disabled />
           </div>
@@ -162,6 +170,7 @@ const Form: FC<FormProps> = () => {
               name="warehouse"
               value={formData.warehouse}
               onChange={handleChange}
+              color="blue"
             />
             <CustomInput
               label="是否借出"

@@ -6,7 +6,6 @@
 }
 
 .table {
-  /* width: 100%; */
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -69,4 +68,7 @@ tbody td {
 .input:hover,
 .input:focus {
   border-color: var(--color-primary-hover);
+}
+.blue {
+  color: var(--color-primary-hover);
 }

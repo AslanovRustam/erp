@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Table.module.css";
 import data from "../../constants/data.json";
 
+// Local storage key for persisting table data
 const LOCAL_KEY = "editable_table_data";
 
 interface RowData {
@@ -11,6 +12,7 @@ interface RowData {
 }
 
 const Table = () => {
+  // Initialize table rows from localStorage or default data
   const [rows, setRows] = useState<Record<string, RowData>>(() => {
     const saved = localStorage.getItem(LOCAL_KEY);
     if (saved) {
@@ -20,7 +22,7 @@ const Table = () => {
         console.error("Error localStorage", e);
       }
     }
-
+    // Fallback to default structure using product list from JSON
     return data.products.reduce((acc, product) => {
       acc[product.id] = {
         code: product.id,
@@ -31,10 +33,12 @@ const Table = () => {
     }, {} as Record<string, RowData>);
   });
 
+  // Save changes to localStorage on every update
   useEffect(() => {
     localStorage.setItem(LOCAL_KEY, JSON.stringify(rows));
   }, [rows]);
 
+  // Generic handler for field changes (code, quantity, price)
   const handleChange = (id: string, field: keyof RowData, value: string) => {
     setRows((prev) => ({
       ...prev,
@@ -54,7 +58,7 @@ const Table = () => {
             <th></th>
             <th>項次</th>
             <th>產品編號</th>
-            <th>單價</th>
+            <th className={styles.blue}>單價</th>
             <th>數量</th>
             <th>小計</th>
             <th>倉庫</th>

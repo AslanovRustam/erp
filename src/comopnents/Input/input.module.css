@@ -30,3 +30,9 @@
 .full {
   width: 100%;
 }
+.red {
+  color: var(--color-primary-error);
+}
+.blue {
+  color: var(--color-primary-hover);
+}

@@ -14,7 +14,7 @@ const Sidebar: FC<SidebarProps> = () => {
   const handleListOpen = () => {
     setOpen(!open);
   };
-
+  // Calculates the dynamic height for the vertical line between square and list
   useLayoutEffect(() => {
     if (open && listRef.current && squareRef.current) {
       const squareRect = squareRef.current.getBoundingClientRect();

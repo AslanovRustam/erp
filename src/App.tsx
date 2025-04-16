@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router";
+import { lazy } from "react";
 import Layout from "./comopnents/Layout/Layout";
-import Routine from "./pages/Routine";
-import BasicInformation from "./pages/BasicInformation";
-import AccountOperations from "./pages/AccountOperations";
-import ReportJob from "./pages/ReportJob";
-import SystemSettings from "./pages/SystemSettings";
+const Routine = lazy(() => import("./pages/Routine"));
+const BasicInformation = lazy(() => import("./pages/BasicInformation"));
+const AccountOperations = lazy(() => import("./pages/AccountOperations"));
+const ReportJob = lazy(() => import("./pages/ReportJob"));
+const SystemSettings = lazy(() => import("./pages/SystemSettings"));
 
 function App() {
   return (

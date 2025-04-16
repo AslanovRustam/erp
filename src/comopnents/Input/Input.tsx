@@ -16,6 +16,7 @@ interface CustomInputProps {
   onChange?: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;
+  color?: string;
 }
 
 const CustomInput: FC<CustomInputProps> = ({
@@ -26,10 +27,16 @@ const CustomInput: FC<CustomInputProps> = ({
   name,
   value = "",
   onChange,
+  color,
 }) => {
   return (
     <label className={`${styles.lablel} ${classname && styles[classname]}`}>
-      {label && <span className={styles.text}>{label}</span>}
+      {label && (
+        <span className={`${styles.text} ${color && styles[color]}`}>
+          {label}
+        </span>
+      )}
+      {/* Render a <select> if type is explicitly set to "select" */}
       {type === "select" ? (
         <select
           className={styles.input}
@@ -45,6 +52,7 @@ const CustomInput: FC<CustomInputProps> = ({
           ))}
         </select>
       ) : (
+        // Otherwise render a regular <input>
         <input
           className={styles.input}
           type={type || "text"}
